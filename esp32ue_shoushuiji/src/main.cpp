@@ -47,6 +47,7 @@ void setup(void)
   pinMode(chlv_hou_diya_kg, INPUT);
   pinMode(yucun_kg, INPUT);
   pinMode(ylt_kg, INPUT);
+  pinMode(js_diya_kg, INPUT);
 
   pinMode(shuiliu_chuanganqi, INPUT); // 废水水流传感�?????? 12
   pinMode(cewen, INPUT);              // 测温传感�???
@@ -492,13 +493,19 @@ void loop(void)
   // 状态判定与切换
   int ylt_val = digitalRead(ylt_kg);
   int yucun_val = digitalRead(yucun_kg);
-  if (ylt_val == LOW)
+  int js_diya_val = digitalRead(js_diya_kg);
+
+  if (ylt_val == HIGH)
+  {
+    jishi_dangqian_zhtai = (yucun_val == HIGH) ? 30 : 40;
+  }
+  else if (js_diya_val == LOW)
   {
     jishi_dangqian_zhtai = (yucun_val == LOW) ? 10 : 20;
   }
   else
   {
-    jishi_dangqian_zhtai = (yucun_val == HIGH) ? 30 : 40;
+    jishi_dangqian_zhtai = (changjiu_xian_zhtai == 0) ? jishi_yiqian_zhtai : changjiu_xian_zhtai;
   }
 
   // 即时状态变化判�??????

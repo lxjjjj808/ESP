@@ -132,8 +132,9 @@ unsigned long send_jiange = 0; // 用于间隔发送状态显示
 /*--------------------------------输入-----------------------------------------*/
 int    chlv_qian_diya_kg=36; //超滤前压力开关
 int    chlv_hou_diya_kg=37; //超滤后压力开关
-int    yucun_kg=34; //预存开关
-int    ylt_kg=35; //水满开关
+int    yucun_kg=34; //洗膜开关
+int    ylt_kg=35; //净水高压开关
+int    js_diya_kg=39; //净水低压开关
  const int shuiliu_chuanganqi = 12; //水流传感器
  /*--------------------------------输出------------------------------------------*/
 int zengya_beng =13;//增压泵

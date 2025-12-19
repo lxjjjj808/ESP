@@ -99,7 +99,7 @@ extern unsigned long gang_qidong_shike; //刚启动时刻
 extern  byte baohu_zht;//保护状态
 /*--------------------------------输入输出------------------------------------------*/
 extern const int    shuiliu_chuanganqi;//水流传感器
-extern  int    chlv_qian_diya_kg,chlv_hou_diya_kg,yucun_kg,ylt_kg; //����
+extern  int    chlv_qian_diya_kg,chlv_hou_diya_kg,yucun_kg,ylt_kg,js_diya_kg; //����
 extern int zong_dcf;//pcf8575 1��
 extern int chlv_chxi_dcf;   
 extern int jinshui_dcf;//jinshui_dcf
