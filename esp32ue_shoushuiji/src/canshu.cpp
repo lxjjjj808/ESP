@@ -130,20 +130,21 @@ unsigned long send_jiange = 0; // 用于间隔发送状态显示
  byte work_state=0;
  unsigned long gang_qidong_shike=0; //刚启动时刻
 /*--------------------------------输入-----------------------------------------*/
-int    chlv_qian_diya_kg=36; //超滤前压力开关
-int    chlv_hou_diya_kg=37; //超滤后压力开关
-int    yucun_kg=34; //预存开关
-int    ylt_kg=35; //水满开关
- const int shuiliu_chuanganqi = 12; //水流传感器
- /*--------------------------------输出------------------------------------------*/
-int zengya_beng =13;//增压泵
-int zong_dcf = 32;//总进水电磁阀
-int chlv_chxi_dcf=33;// 超滤冲洗电磁阀
-int jinshui_dcf = 25;//泵前进水电磁阀
-int js_dcf = 26;//净水电磁阀
-int feishui_chxi_dcf=27;//废水冲洗电磁阀
-int fdjr=14;//防冻加热
-int fengmingqi=15;//蜂鸣器
+int    chlv_qian_diya_kg=36; //超滤前低压开关
+int    chlv_hou_diya_kg=39; //超滤后低压开关
+int    yucun_kg=34; //洗膜开关（预存纯净水压力开关）
+int    ylt_kg=32; //净水高压力开关（高压停机）
+int    diya_kg=35; //净水低压力开关（低压启动）
+const int shuiliu_chuanganqi = 18; //流量传感器输入（5V三线）
+/*--------------------------------输出------------------------------------------*/
+int zengya_beng =4; //增压泵（开机默认低电平）
+int zong_dcf = 33; //总进水电磁阀
+int chlv_chxi_dcf=25; //超滤冲洗电磁阀
+int jinshui_dcf = 26; //泵前进水电磁阀
+int js_dcf = 14; //净水电磁阀
+int feishui_chxi_dcf=12; //废水冲洗电磁阀
+int fdjr=27; //防冻加热
+int fengmingqi=15; //蜂鸣器
 
 int cewen=23;//���´�����
 

@@ -47,6 +47,7 @@ void setup(void)
   pinMode(chlv_hou_diya_kg, INPUT);
   pinMode(yucun_kg, INPUT);
   pinMode(ylt_kg, INPUT);
+  pinMode(diya_kg, INPUT);
 
   pinMode(shuiliu_chuanganqi, INPUT); // 废水水流传感�?????? 12
   pinMode(cewen, INPUT);              // 测温传感�???
@@ -93,7 +94,7 @@ void setup(void)
   // 设置带宽（20MHz比40MHz传输距离更远）
   esp_wifi_set_bandwidth(WIFI_IF_STA, WIFI_BW_HT20);
 
-  WiFi.softAP("esp-captive", "19711128"); // 设置AP模式的SSID和密码
+  WiFi.softAP("esp", "19711128"); // 设置AP模式的SSID和密码
   WiFi_Connect();
 
   // HTTP服务器路由
